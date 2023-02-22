@@ -7,6 +7,8 @@
 
 import UIKit
 import CoreData
+import SwipeCellKit
+
 
 class SecondViewController: UIViewController {
     
@@ -26,6 +28,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        tableView.rowHeight = 65.0
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
@@ -93,7 +96,7 @@ class SecondViewController: UIViewController {
 
 //MARK: - TableView Datasource Methods
 
-extension SecondViewController: UITableViewDataSource {
+extension SecondViewController: UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titleListArray.count
@@ -101,13 +104,12 @@ extension SecondViewController: UITableViewDataSource {
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "sampleCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "sampleCell", for: indexPath) as! SwipeTableViewCell
         
         let item = titleListArray[indexPath.row]
-        
         cell.textLabel?.text = item.title
-        
         cell.accessoryType = item.done ? .checkmark : .none
+        cell.delegate = self
 
         return cell
     }
@@ -167,3 +169,30 @@ extension SecondViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
 }
+
+
+extension SecondViewController: SwipeTableViewCellDelegate {
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        
+        guard orientation == .right else { return nil }
+
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+
+            self.context.delete(self.titleListArray[indexPath.row])
+            self.titleListArray.remove(at: indexPath.row)
+        }
+        
+        deleteAction.image = UIImage(named: "delete-icon")
+        
+        return [deleteAction]
+    }
+
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+        var options = SwipeOptions()
+        options.expansionStyle = .destructive
+        return options
+    }
+    
+}
+

@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iQa-BA-2FW">
-                                <rect key="frame" x="0.0" y="88" width="414" height="775"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sv4-vQ-kqw" userLabel="LogoView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="147"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDoooList" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lz-OP-WmI">
-                                                <rect key="frame" x="121.5" y="56" width="171" height="35.5"/>
+                                                <rect key="frame" x="121.5" y="55.5" width="171" height="35.5"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="32"/>
                                                 <color key="textColor" red="0.13725490196078433" green="0.25490196078431371" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </label>
@@ -36,17 +36,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0x-S5-6Aq" userLabel="Özellik1View">
-                                        <rect key="frame" x="0.0" y="157" width="414" height="147"/>
+                                        <rect key="frame" x="0.0" y="157" width="414" height="146.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="books.vertical.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="r9P-my-Eun">
-                                                <rect key="frame" x="20" y="45.5" width="50" height="55.5"/>
+                                                <rect key="frame" x="20" y="45.5" width="50" height="55"/>
                                                 <color key="tintColor" red="0.13725490200000001" green="0.25490196079999999" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="stq-1C-4lT"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="i0I-gu-c2v">
-                                                <rect key="frame" x="80" y="51" width="254" height="45"/>
+                                                <rect key="frame" x="80" y="50.5" width="254" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Özellik 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyJ-V9-wpe">
                                                         <rect key="frame" x="0.0" y="0.0" width="254" height="20.5"/>
@@ -76,7 +76,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgx-QR-CYu" userLabel="Özellik2View">
-                                        <rect key="frame" x="0.0" y="314" width="414" height="147"/>
+                                        <rect key="frame" x="0.0" y="313.5" width="414" height="147"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="04f-5e-6Wr">
                                                 <rect key="frame" x="80" y="37.5" width="254" height="81"/>
@@ -119,7 +119,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nR-2G-P4o" userLabel="Özellik3View">
-                                        <rect key="frame" x="0.0" y="471" width="414" height="147"/>
+                                        <rect key="frame" x="0.0" y="470.5" width="414" height="146.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7iN-yW-JRs">
                                                 <rect key="frame" x="80" y="37.5" width="254" height="81"/>
@@ -161,7 +161,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrJ-MO-cxL" userLabel="ButtonView">
-                                        <rect key="frame" x="0.0" y="628" width="414" height="147"/>
+                                        <rect key="frame" x="0.0" y="627" width="414" height="147"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikh-Xa-zuy">
                                                 <rect key="frame" x="112" y="53.5" width="190" height="40.5"/>
@@ -227,7 +227,7 @@
                         <color key="sectionIndexColor" red="0.13725490200000001" green="0.25490196079999999" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.96862745100000003" green="0.90196078430000004" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="categoryCell" id="8kg-Rp-xdA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="categoryCell" id="8kg-Rp-xdA" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8kg-Rp-xdA" id="zWz-QT-5zO">
@@ -278,7 +278,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sampleCell" id="oia-2I-Sie">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sampleCell" id="oia-2I-Sie" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
                                         <rect key="frame" x="0.0" y="88.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oia-2I-Sie" id="xiw-v1-r6v">
@@ -302,7 +302,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="N2V-37-7Af" id="5St-HY-u1c"/>
-                        <outlet property="tableView" destination="8lT-Qa-Soa" id="mM3-gA-6f7"/>
+                        <outlet property="tableView" destination="8lT-Qa-Soa" id="96Y-Ea-klX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyo-JP-n32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

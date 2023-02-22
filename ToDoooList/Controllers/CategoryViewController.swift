@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import SwipeCellKit
 
 class CategoryViewController: UITableViewController {
 
@@ -19,6 +20,7 @@ class CategoryViewController: UITableViewController {
         
         
         loadCategory()
+        tableView.rowHeight = 80.0
     }
     
     //MARK: - Category Add Button Methods
@@ -52,13 +54,14 @@ class CategoryViewController: UITableViewController {
         
         return categoryListArray.count
     }
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as! SwipeTableViewCell
         let category = categoryListArray[indexPath.row]
-        
         cell.textLabel?.text = category.name
+        cell.delegate = self
         
         return cell
     }
@@ -105,4 +108,31 @@ class CategoryViewController: UITableViewController {
     }
     
 }
+
+//MARK: - SwipeTableView Cell Methods
+
+extension CategoryViewController: SwipeTableViewCellDelegate {
+    
+        func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+            
+            guard orientation == .right else { return nil }
+    
+            let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+    
+                self.context.delete(self.categoryListArray[indexPath.row])
+                self.categoryListArray.remove(at: indexPath.row)
+            }
+    
+            deleteAction.image = UIImage(named: "delete-icon")
+    
+            return [deleteAction]
+        }
+    
+        func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+            var options = SwipeOptions()
+            options.expansionStyle = .destructive
+            return options
+        }
+}
+
 
