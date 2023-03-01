@@ -10,14 +10,9 @@ import UIKit
 class EntryViewController: UIViewController {
     
     
-    @IBOutlet weak var logoLabel: UILabel!
-    @IBOutlet weak var özellik1Label: UILabel!
-    @IBOutlet weak var özellik1ExLabel: UILabel!
-    @IBOutlet weak var özellik2Label: UILabel!
-    @IBOutlet weak var özellik2ExLabel: UILabel!
-    @IBOutlet weak var özellik3Label: UILabel!
-    @IBOutlet weak var özellik3ExLabel: UILabel!
-    @IBOutlet weak var devamButton: UIButton!
+    @IBOutlet weak var listButton: UIButton!
+    @IBOutlet weak var reminderButton: UIButton!
+    @IBOutlet weak var calendarButton: UIButton!
     
     
 
@@ -26,22 +21,32 @@ class EntryViewController: UIViewController {
         loadingScreen()
     }
     
-    
-    @IBAction func devamButtonPressed(_ sender: UIButton) {
+    @IBAction func listButtonPressed(_ sender: UIButton) {
         
         performSegue(withIdentifier: "goToCategory", sender: self)
     }
     
+    @IBAction func reminderButtonPressed(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "goToReminder", sender: self)
+    }
+    
+    @IBAction func calendarButtonPressed(_ sender: UIButton) {
+        
+    }
+
 
     func loadingScreen() {
-        özellik1Label.text = "Yapmak istediklerinizi hızlı ve kolay şekilde oluşturun"
-        özellik1ExLabel.text = "Hedeflerinizi, adımlarınızı ve rutinlerinizi girin."
-        özellik2Label.text = "Hedef hatırlatıcıları"
-        özellik2ExLabel.text = "Hatırlatıcılar ayarlayın ve planlarınızı kaçırmayın."
-        özellik3Label.text = "Takvimleyin"
-        özellik3ExLabel.text = "Takvime bakarak planlarınıza geniş bir çerçeveden bakın."
-        devamButton.layer.cornerRadius = 15
+        listButton.titleLabel?.text = "Yapmak istediklerinizi hızlı ve kolay şekilde oluşturun"
+        listButton.subtitleLabel?.text = "Hedeflerinizi, adımlarınızı ve rutinlerinizi girin."
+        reminderButton.titleLabel?.text = "Hedef hatırlatıcıları"
+        reminderButton.subtitleLabel?.text = "Hatırlatıcılar ayarlayın ve planlarınızı kaçırmayın."
+        calendarButton.titleLabel?.text = "Takvimleyin"
+        calendarButton.subtitleLabel?.text = "Takvime bakarak planlarınıza geniş bir çerçeveden bakın."
         
+        listButton.layer.cornerRadius = 20
+        reminderButton.layer.cornerRadius = 20
+        calendarButton.layer.cornerRadius = 20
     }
 
 }

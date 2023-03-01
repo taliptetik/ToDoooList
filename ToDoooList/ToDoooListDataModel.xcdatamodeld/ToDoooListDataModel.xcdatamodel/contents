@@ -9,8 +9,14 @@
         <attribute name="title" attributeType="String"/>
         <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="items" inverseEntity="Category"/>
     </entity>
+    <entity name="Reminder" representedClassName=".Reminder" syncable="YES" codeGenerationType="class">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="identifier" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+    </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="Category" positionX="-318.005859375" positionY="-14.974609375" width="128" height="73"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Reminder" positionX="-189" positionY="9" width="128" height="74"/>
     </elements>
 </model>
