@@ -88,9 +88,9 @@ class ReminderViewController: UIViewController {
 
     func scheduleTest() {
         let content = UNMutableNotificationContent()
-        content.title = "Hatırlatıcı Deneme"
+        content.title = "Tiyatro"
         content.sound = .default
-        content.body = "Bildirim denemesi için gerekli içerik. "
+        content.body = "İstanbul devlet tiyatrosu biletleri birazdan satışı çıkıyor."
 
         let targetDate = Date().addingTimeInterval(10)
         let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second],
@@ -159,8 +159,8 @@ extension ReminderViewController: UITableViewDataSource {
         formatter.dateFormat = "MMM, dd, YYYY"
         cell.detailTextLabel?.text = formatter.string(from: date!)
 
-        cell.textLabel?.font = UIFont(name: "Arial", size: 25)
-        cell.detailTextLabel?.font = UIFont(name: "Arial", size: 22)
+        cell.textLabel?.font = UIFont(name: "Arial", size: 20)
+        cell.detailTextLabel?.font = UIFont(name: "Arial", size: 17)
         return cell
     }
 

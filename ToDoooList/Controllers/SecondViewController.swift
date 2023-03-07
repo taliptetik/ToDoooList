@@ -58,7 +58,13 @@ class SecondViewController: UIViewController {
             textField = alertTextField
         }
         
+        let cancelAction = UIAlertAction(title: "Çıkış", style: .default) { action in
+
+        }
+        
         alert.addAction(action)
+        alert.addAction(cancelAction)
+        
         present(alert, animated: true, completion: nil)
     }
     
@@ -92,6 +98,7 @@ class SecondViewController: UIViewController {
 
     }
     
+
 }
 
 //MARK: - TableView Datasource Methods

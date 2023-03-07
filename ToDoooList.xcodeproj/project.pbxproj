@@ -11,6 +11,7 @@
 		CB3B202C29A3857A007AD27A /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3B202B29A38579007AD27A /* CategoryViewController.swift */; };
 		CB40F1D5299A515400ED5F22 /* ToDoooListDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB40F1D3299A515400ED5F22 /* ToDoooListDataModel.xcdatamodeld */; };
 		CB5EE80F29A9322F00E6D54A /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5EE80E29A9322F00E6D54A /* AddReminderViewController.swift */; };
+		CB5FA98929B60A9F00BC10CD /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5FA98829B60A9F00BC10CD /* CalendarCell.swift */; };
 		CB9232322982F00100C6EF31 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9232312982F00100C6EF31 /* SecondViewController.swift */; };
 		CB958AA829A9031500239C36 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB958AA729A9031500239C36 /* ReminderViewController.swift */; };
 		CB9DD7EE29804F3800D2722A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD7ED29804F3800D2722A /* AppDelegate.swift */; };
@@ -19,6 +20,8 @@
 		CB9DD7F529804F3800D2722A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9DD7F329804F3800D2722A /* Main.storyboard */; };
 		CB9DD7FA29804F3A00D2722A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB9DD7F929804F3A00D2722A /* Assets.xcassets */; };
 		CB9DD7FD29804F3A00D2722A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9DD7FB29804F3A00D2722A /* LaunchScreen.storyboard */; };
+		CBDF87E629B610730003B79A /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDF87E529B610730003B79A /* CalendarViewController.swift */; };
+		CBDF87E829B631760003B79A /* CalendarSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDF87E729B631760003B79A /* CalendarSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,7 @@
 		CB3B202B29A38579007AD27A /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		CB40F1D4299A515400ED5F22 /* ToDoooListDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoooListDataModel.xcdatamodel; sourceTree = "<group>"; };
 		CB5EE80E29A9322F00E6D54A /* AddReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
+		CB5FA98829B60A9F00BC10CD /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		CB9232312982F00100C6EF31 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CB958AA729A9031500239C36 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		CB9DD7EA29804F3800D2722A /* ToDoooList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoooList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +42,8 @@
 		CB9DD7F929804F3A00D2722A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB9DD7FC29804F3A00D2722A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB9DD7FE29804F3A00D2722A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBDF87E529B610730003B79A /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		CBDF87E729B631760003B79A /* CalendarSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,9 @@
 				CB9232312982F00100C6EF31 /* SecondViewController.swift */,
 				CB958AA729A9031500239C36 /* ReminderViewController.swift */,
 				CB5EE80E29A9322F00E6D54A /* AddReminderViewController.swift */,
+				CBDF87E529B610730003B79A /* CalendarViewController.swift */,
+				CB5FA98829B60A9F00BC10CD /* CalendarCell.swift */,
+				CBDF87E729B631760003B79A /* CalendarSupport.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,9 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDF87E629B610730003B79A /* CalendarViewController.swift in Sources */,
 				CB9DD7F229804F3800D2722A /* EntryViewController.swift in Sources */,
 				CB9DD7EE29804F3800D2722A /* AppDelegate.swift in Sources */,
 				CB958AA829A9031500239C36 /* ReminderViewController.swift in Sources */,
+				CB5FA98929B60A9F00BC10CD /* CalendarCell.swift in Sources */,
+				CBDF87E829B631760003B79A /* CalendarSupport.swift in Sources */,
 				CB9DD7F029804F3800D2722A /* SceneDelegate.swift in Sources */,
 				CB9232322982F00100C6EF31 /* SecondViewController.swift in Sources */,
 				CB3B202C29A3857A007AD27A /* CategoryViewController.swift in Sources */,

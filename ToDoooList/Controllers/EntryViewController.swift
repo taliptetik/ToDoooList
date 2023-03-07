@@ -33,6 +33,7 @@ class EntryViewController: UIViewController {
     
     @IBAction func calendarButtonPressed(_ sender: UIButton) {
         
+        performSegue(withIdentifier: "goToCalendar", sender: self)
     }
 
 

@@ -19,8 +19,8 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         titleField.delegate = self
         bodyField.delegate = self
-       
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSaveButton))
+
     }
 
     @objc func didTapSaveButton() {
@@ -36,6 +36,10 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
 }

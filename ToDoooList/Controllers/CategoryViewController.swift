@@ -21,6 +21,7 @@ class CategoryViewController: UITableViewController {
         
         loadCategory()
         tableView.rowHeight = 80.0
+        
     }
     
     //MARK: - Category Add Button Methods
@@ -39,7 +40,12 @@ class CategoryViewController: UITableViewController {
             self.saveCategory()
         }
         
+        let cancelAction = UIAlertAction(title: "Çıkış", style: .default) { action in
+
+        }
+        
         alert.addAction(action)
+        alert.addAction(cancelAction)
         
         alert.addTextField { alertTextField in
             alertTextField.placeholder = "Yeni kategori oluştur "
@@ -62,6 +68,8 @@ class CategoryViewController: UITableViewController {
         let category = categoryListArray[indexPath.row]
         cell.textLabel?.text = category.name
         cell.delegate = self
+        
+       // cell.textLabel?.textColor = UIColor(red: 35/256, green: 65/256, blue: 69/256, alpha: 1.0)
         
         return cell
     }
