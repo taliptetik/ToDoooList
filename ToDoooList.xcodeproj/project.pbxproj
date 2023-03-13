@@ -92,8 +92,6 @@
 				CB958AA729A9031500239C36 /* ReminderViewController.swift */,
 				CB5EE80E29A9322F00E6D54A /* AddReminderViewController.swift */,
 				CBDF87E529B610730003B79A /* CalendarViewController.swift */,
-				CB5FA98829B60A9F00BC10CD /* CalendarCell.swift */,
-				CBDF87E729B631760003B79A /* CalendarSupport.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -102,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				CB40F1D3299A515400ED5F22 /* ToDoooListDataModel.xcdatamodeld */,
+				CB5FA98829B60A9F00BC10CD /* CalendarCell.swift */,
+				CBDF87E729B631760003B79A /* CalendarSupport.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

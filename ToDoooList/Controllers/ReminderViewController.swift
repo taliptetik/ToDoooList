@@ -90,7 +90,7 @@ class ReminderViewController: UIViewController {
         let content = UNMutableNotificationContent()
         content.title = "Tiyatro"
         content.sound = .default
-        content.body = "İstanbul devlet tiyatrosu biletleri birazdan satışı çıkıyor."
+        content.body = "İstanbul devlet tiyatrosu biletleri birazdan satışa çıkıyor."
 
         let targetDate = Date().addingTimeInterval(10)
         let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second],
